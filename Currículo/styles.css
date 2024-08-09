@@ -1,0 +1,491 @@
+/* Define a fonte para a página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Estiliza o cabeçalho e o menu de navegação */
+header {
+    background-color: #fff;
+    color: #fff;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    max-height: 50px; /* Ajuste o tamanho do logotipo conforme necessário */
+    width: auto; /* Mantém a proporção original do logotipo */
+    margin-left: 5%;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #40301D;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Define o estilo do conteúdo */
+.container {
+    display: flex;
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: center; /* Alinha o texto horizontalmente ao centro */
+    justify-content: center; /* Alinha o texto verticalmente ao centro */
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+    margin: 0; /* Remove margens padrão */
+    padding: 20px;
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+    height: 60vh; /* Ajuste a altura do contêiner conforme necessário */
+    overflow: hidden; /* Garante que o conteúdo não exceda o contêiner */
+    margin-left: 5%;
+}
+
+.container p {
+    text-align: justify; /* Justifica o texto dentro dos parágrafos */
+    margin: 10px auto; /* Ajuste as margens para centralizar */
+    padding: 10px; /* Espaçamento interno dos parágrafos */
+    line-height: 1.8; /* Aumenta a altura da linha para melhorar a legibilidade */
+    max-width: 800px; /* Define a largura máxima do parágrafo */
+    color: #fff;
+}
+
+h1 {
+    font-size: 3em;
+    color: #fff;
+}
+
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+}
+
+.foto {
+    width: 500px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    margin-right: 10%; /* Espaço entre o texto e a foto */
+    border-radius: 0%; /* Forma circular para a foto */
+    box-sizing: border-box;
+    object-fit: cover;
+    margin-bottom: -20px;
+}
+
+section {
+    margin: 0; /* Remove margens externas */
+    padding: 0; /* Remove espaçamento interno */
+    background-color: #f9f9f9; /* Cor de fundo desejada para as seções */
+}
+
+/* Estiliza os itens de educação e experiência */
+.educacao-item, .experiencia-item, .certificacao-item {
+    margin-bottom: 20px;
+}
+
+/* Estiliza a lista de habilidades */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+/* Estiliza o rodapé */
+footer {
+    background-color: #498C6D;
+    color: #fff;
+    padding: 10px 20px; /* Reduz o padding para diminuir a altura */
+    text-align: center;
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+    margin: 0; /* Remove margens externas */
+}
+
+
+.containerfooter {
+    display: flex;
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: center; /* Alinha o texto horizontalmente ao centro */
+    justify-content: center; /* Alinha o texto verticalmente ao centro */
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+    margin: 0; /* Remove margens padrão */
+    padding: 0px;
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+    overflow: hidden; /* Garante que o conteúdo não exceda o contêiner */
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer p {
+    margin: 20px 0 0; /* Ajuste as margens para menos espaçamento vertical */
+    font-size: 0.9em; /* Ajusta o tamanho da fonte, se necessário */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        margin: 100px auto 0; /* Ajusta a margem para a área do menu fixo */
+    }
+}
+
+@media (max-width: 480px) {
+    .foto {
+        width: 120px;
+    }
+
+    .vaca {
+        width: 120px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin: 0;
+    }
+
+    h2, h3 {
+        font-size: 1.2em;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #40301D;
+    cursor: pointer;
+}
+
+/* Esconder menu em dispositivos móveis e mostrar o botão */
+.nav-menu {
+    display: flex;
+    justify-content: flex-end; /* Alinha os itens da lista à direita */
+    flex: 1; /* Faz com que o menu ocupe o espaço disponível */
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Esconde o menu por padrão */
+        position: absolute;
+        top: 70px; /* Ajuste a posição conforme necessário */
+        right: 0;
+        background-color: #D98236;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    
+    .menu-toggle {
+        display: block; /* Mostra o botão do menu em dispositivos móveis */
+        position: absolute;
+        left: 85%; /* Ajuste este valor para mover o botão para a esquerda */
+        top: 50%; /* Alinha verticalmente ao meio do cabeçalho */
+        transform: translateY(-30%); /* Corrige o alinhamento vertical */
+    }
+
+    .nav-menu ul {
+        display: block;
+        text-align: left;
+    }
+
+    .nav-menu li {
+        margin: 25px;
+    }
+
+    .nav-menu.active {
+        display: block; /* Exibe o menu quando ativado */
+    }
+
+    .nav-menu a {
+        color: #fff; /* Cor do texto dos links */
+        text-decoration: none;
+        display: block; /* Faz com que o link ocupe toda a área do item */
+        padding: 5px; /* Espaçamento interno dos itens do menu */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves para a cor de fundo e texto */
+    }
+
+    .nav-menu a:hover {
+        background-color: #498C6D; /* Cor de fundo verde ao passar o mouse */
+        color: #fff; /* Garante que o texto continue branco */
+    }
+
+    #apresentacao {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: center; /* Centraliza os itens horizontalmente */
+        text-align: center; /* Centraliza o texto */
+        padding: 10px;
+        margin-top: 0;
+    }
+
+    .foto {
+        margin-top: 20px; /* Espaço acima da imagem quando empilhada */
+        width: 80%; /* Ajusta a largura da imagem para caber na tela */
+        max-width: 300px; /* Define um tamanho máximo para a imagem */
+    }
+
+    .vaca {
+        margin-top: 0; /* Espaço acima da imagem quando empilhada */
+        width: 100%; /* Ajusta a largura da imagem para caber na tela */
+        max-width: 500px; /* Define um tamanho máximo para a imagem */
+    }
+
+    #educacao {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: center; /* Centraliza os itens horizontalmente */
+        text-align: center; /* Centraliza o texto */
+        padding: 10px;
+        margin-top: 0;
+    }
+
+    .containereducacao {
+        text-align: center;
+        width: 100%; /* Faz com que o container ocupe toda a largura disponível */
+        padding: 0px; /* Ajusta o padding horizontal */
+        box-sizing: border-box;
+        margin: 10px 0;
+        max-width: 100%;
+    }
+
+    .container {
+        width: 100%; /* Faz com que o container ocupe toda a largura disponível */
+        padding: 0px; /* Ajusta o padding horizontal */
+        box-sizing: border-box;
+        margin: 10px 0;
+        max-width: 100%;
+    }
+
+    .container p {
+        text-align: justify; /* Centraliza o texto */
+        margin: 20px auto 10px; /* Remove margens que possam causar corte do texto */
+        padding: 0px; /* Espaçamento interno */
+        line-height: 1.6; /* Ajusta a altura da linha */
+        max-width: 100%; /* Garante que o parágrafo use a largura total disponível */
+        overflow: visible; /* Garante que o texto não seja cortado */
+    }
+
+    h1 {
+        font-size: 2em; /* Reduz o tamanho da fonte para telas menores */
+        margin: 0; /* Garante que não haja margens adicionais */
+        margin-bottom: 10px;
+    }
+}
+
+/* Efeito de transição e cor do link */
+nav a {
+    color: #fff; /* Cor do texto dos links */
+        text-decoration: none;
+        display: block; /* Faz com que o link ocupe toda a área do item */
+        padding: 10px; /* Espaçamento interno dos itens do menu */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves para a cor de fundo e texto */
+}
+
+/* Efeito ao passar o mouse sobre o item */
+nav li:hover a {
+    background-color: #D98236; /* Cor de fundo verde ao passar o mouse */
+    color: #fff; /* Garante que o texto continue branco */
+}
+
+.contact-button {
+    background-color: #D98236; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 20px; /* Tamanho da fonte */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+    margin-top: 20px; /* Espaço acima do botão */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+/* Estiliza o botão ao passar o mouse */
+.contact-button:hover {
+    background-color: #397b57; /* Cor de fundo ao passar o mouse */
+}
+
+#apresentacao {
+    display: flex; /* Usar flexbox para alinhamento horizontal */
+    align-items: center; /* Alinha verticalmente os itens no centro */
+    justify-content: space-between; /* Distribui o espaço entre o texto e a foto */
+    padding: 20px; /* Espaçamento ao redor da seção */
+    background-color: #498C6D; /* Cor de fundo para visualização */
+    box-sizing: border-box;
+    position: relative;
+}
+
+#educacao {
+    min-height: 80vh;
+    display: flex; /* Usar flexbox para alinhamento horizontal */
+    align-items: left; /* Alinha verticalmente os itens no centro */
+    justify-content: space-between; /* Distribui o espaço entre o texto e a foto */
+    padding: 20px; /* Espaçamento ao redor da seção */
+    background-color: #f9f9f9; /* Cor de fundo para visualização */
+    box-sizing: border-box;
+}
+
+.containereducacao {
+    display: flex;
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: left; /* Alinha o texto horizontalmente ao centro */
+    text-align: left; /* Centraliza o texto dentro do contêiner */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    padding: 20px; /* Espaçamento interno do contêiner */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+    overflow: visible; /* Garante que o conteúdo seja visível sem rolagem */
+    margin-left: 5%;
+}
+
+.educacao-item {
+    margin-bottom: 20px; /* Espaço entre os itens */
+    padding: 15px; /* Espaçamento interno dos itens */
+    text-align: left; /* Alinha todo o texto à esquerda dentro do item */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+    width: 100%;
+}
+
+#educacao h1 {
+    color: #40301D; /* Alinha o texto do h1 à cor branca */
+}
+
+.educacao-item h2 {
+    margin-top: 0; /* Remove a margem superior do h2 */
+    margin-bottom: 10px; /* Espaço abaixo do h2 */
+    color: #40301D;
+}
+
+.educacao-item p {
+    margin: 5px 0; /* Adiciona espaçamento vertical entre os parágrafos */
+    padding: 0; /* Remove o padding dos parágrafos */
+    text-align: left;    
+    font-size: 1.1em;
+    color: #40301D;
+    font-style: italic;
+}
+
+.vaca {
+    width: 50%;
+    height: auto;
+    border-radius: 15px;
+    box-sizing: border-box;
+    object-fit: cover;
+    margin-top: auto; /* Empurra a imagem para o final da seção */
+    margin-bottom: 20px; /* Ajusta o espaço abaixo da imagem */
+}
+
+#certificacoes {
+    padding: 20px; /* Espaçamento ao redor da seção */
+    background-color: #498C6D; /* Cor de fundo desejada para a seção */
+    text-align: center; /* Centraliza o texto do título dentro da seção */
+}
+
+#experiencia {
+    display: flex; /* Usar flexbox para alinhamento horizontal */
+    align-items: center; /* Alinha verticalmente os itens no centro */
+    justify-content: space-between; /* Distribui o espaço entre o texto e a foto */
+    padding: 20px; /* Espaçamento ao redor da seção */
+    background-color: #498c6d34; /* Cor de fundo para visualização */
+    box-sizing: border-box;
+}
+
+.containercertificacao {
+    display: grid; /* Usar grid para layout de colunas */
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas de largura igual */
+    gap: 20px; /* Espaço entre as colunas */
+    max-width: 1200px; /* Largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    align-items: center;
+}
+
+.certificacao-item {
+    background: #fff; /* Fundo branco para os itens */
+    padding: 20px; /* Espaçamento interno dos itens */
+    border-radius: 8px; /* Cantos arredondados dos itens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    text-align: center; /* Centraliza o texto dentro dos itens */
+}
+
+.containercertificacao h1 {
+    grid-column: span 5; /* Faz com que o título ocupe toda a largura das 5 colunas */
+    margin: 0; /* Remove margens ao redor do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    font-size: 3em; /* Tamanho da fonte do título */
+    color: #f9f9f9; /* Cor do texto do título */
+}
+
+#habilidades {
+    display: flex; /* Usar flexbox para alinhamento horizontal */
+    align-items: center; /* Alinha verticalmente os itens no centro */
+    justify-content: space-between; /* Distribui o espaço entre o texto e a foto */
+    padding: 20px; /* Espaçamento ao redor da seção */
+    background-color: #f9f9f9; /* Cor de fundo para visualização */
+    box-sizing: border-box;
+}
