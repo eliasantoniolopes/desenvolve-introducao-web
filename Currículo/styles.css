@@ -76,8 +76,9 @@ nav a {
     padding: 20px;
     box-sizing: border-box; /* Inclui padding e border na largura total */
     height: 60vh; /* Ajuste a altura do contêiner conforme necessário */
-    overflow: hidden; /* Garante que o conteúdo não exceda o contêiner */
+    overflow-x: hidden;
     margin-left: 5%;
+    max-width: 100%; /* Garante que o contêiner não ultrapasse a largura da tela */
 }
 
 .container p {
@@ -148,7 +149,7 @@ footer {
     margin: 0; /* Remove margens padrão */
     padding: 0px;
     box-sizing: border-box; /* Inclui padding e border na largura total */
-    overflow: hidden; /* Garante que o conteúdo não exceda o contêiner */
+    overflow-x: hidden; /* Garante que o conteúdo não exceda o contêiner */
 }
 
 footer ul {
@@ -316,6 +317,7 @@ footer p {
         box-sizing: border-box;
         margin: 10px 0;
         max-width: 100%;
+        overflow-x: hidden;
     }
 
     .container {
@@ -324,6 +326,7 @@ footer p {
         box-sizing: border-box;
         margin: 10px 0;
         max-width: 100%;
+        overflow-x: hidden;
     }
 
     .container p {
@@ -404,6 +407,7 @@ nav li:hover a {
     box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
     overflow: visible; /* Garante que o conteúdo seja visível sem rolagem */
     margin-left: 5%;
+    overflow-x: hidden;
 }
 
 .educacao-item {
@@ -469,6 +473,7 @@ nav li:hover a {
     box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
     overflow: visible; /* Garante que o conteúdo seja visível sem rolagem */
     margin-left: 5%;
+    overflow-x: hidden;
 }
 
 #habilidade h1 {
@@ -504,6 +509,7 @@ nav li:hover a {
     box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
     overflow: visible; /* Garante que o conteúdo seja visível sem rolagem */
     margin-left: 5%;
+    overflow-x: hidden;
 }
 
 .experiencia-item {
@@ -540,6 +546,7 @@ nav li:hover a {
     max-width: 1200px; /* Largura máxima do contêiner */
     margin: 0 auto; /* Centraliza o contêiner horizontalmente */
     align-items: center;
+    overflow-x: hidden;
 }
 
 .certificacao-item {
