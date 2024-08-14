@@ -4,18 +4,20 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    padding-top: 70px;
 }
 
 /* Estiliza o cabeçalho e o menu de navegação */
 header {
     background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     color: #fff;
     padding: 20px;
-    position: relative;
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .header-container {
@@ -128,8 +130,8 @@ ul li {
 
 /* Estiliza o rodapé */
 footer {
-    background-color: #498C6D;
-    color: #fff;
+    background-color: #fff;
+    color: #498C6D;
     padding: 10px 20px; /* Reduz o padding para diminuir a altura */
     text-align: center;
     box-sizing: border-box; /* Inclui padding e borda na largura total */
@@ -161,7 +163,7 @@ footer ul li {
 }
 
 footer ul li a {
-    color: #fff;
+    color: #498C6D;
     text-decoration: none;
 }
 
@@ -447,13 +449,88 @@ nav li:hover a {
     text-align: center; /* Centraliza o texto do título dentro da seção */
 }
 
+#habilidade {
+    display: flex; /* Usar flexbox para alinhamento horizontal */
+    align-items: center; /* Alinha verticalmente os itens no centro */
+    justify-content: space-between; /* Distribui o espaço entre o texto e a foto */
+    padding: 20px; /* Espaçamento ao redor da seção */
+    background-color: #498C6D; /* Cor de fundo para visualização */
+    box-sizing: border-box;
+    position: relative;
+}
+
+.containerhabilidade {
+    display: flex;
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: left; /* Alinha o texto horizontalmente ao centro */
+    text-align: left; /* Centraliza o texto dentro do contêiner */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    padding: 20px; /* Espaçamento interno do contêiner */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+    overflow: visible; /* Garante que o conteúdo seja visível sem rolagem */
+    margin-left: 5%;
+}
+
+#habilidade h1 {
+    color: #fff; /* Alinha o texto do h1 à cor branca */
+}
+
+#habilidade li {
+    margin: 5px 0; /* Adiciona espaçamento vertical entre os parágrafos */
+    padding: 0; /* Remove o padding dos parágrafos */
+    text-align: left;    
+    font-size: 1.1em;
+    color: #fff;
+    font-style: italic;
+}
+
+
 #experiencia {
     display: flex; /* Usar flexbox para alinhamento horizontal */
     align-items: center; /* Alinha verticalmente os itens no centro */
     justify-content: space-between; /* Distribui o espaço entre o texto e a foto */
     padding: 20px; /* Espaçamento ao redor da seção */
-    background-color: #498c6d34; /* Cor de fundo para visualização */
+    background-color: #fff; /* Cor de fundo para visualização */
     box-sizing: border-box;
+}
+
+.containerexperiencia {
+    display: flex;
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: left; /* Alinha o texto horizontalmente ao centro */
+    text-align: left; /* Centraliza o texto dentro do contêiner */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    padding: 20px; /* Espaçamento interno do contêiner */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+    overflow: visible; /* Garante que o conteúdo seja visível sem rolagem */
+    margin-left: 5%;
+}
+
+.experiencia-item {
+    margin-bottom: 20px; /* Espaço entre os itens */
+    padding: 15px; /* Espaçamento interno dos itens */
+    text-align: left; /* Alinha todo o texto à esquerda dentro do item */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+    width: 100%;
+}
+
+#experiencia h1 {
+    color: #40301D; /* Alinha o texto do h1 à cor branca */
+}
+
+.experiencia-item h2 {
+    margin-top: 0; /* Remove a margem superior do h2 */
+    margin-bottom: 10px; /* Espaço abaixo do h2 */
+    color: #40301D;
+}
+
+.experiencia-item p {
+    margin: 5px 0; /* Adiciona espaçamento vertical entre os parágrafos */
+    padding: 0; /* Remove o padding dos parágrafos */
+    text-align: left;    
+    font-size: 1.1em;
+    color: #40301D;
+    font-style: italic;
 }
 
 .containercertificacao {
