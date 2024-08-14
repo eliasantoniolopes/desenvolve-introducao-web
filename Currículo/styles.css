@@ -173,31 +173,6 @@ footer p {
     font-size: 0.9em; /* Ajusta o tamanho da fonte, se necessário */
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    header {
-        padding: 15px;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .container {
-        margin: 100px auto 0; /* Ajusta a margem para a área do menu fixo */
-    }
-}
-
 @media (max-width: 480px) {
     .foto {
         width: 120px;
@@ -217,7 +192,7 @@ footer p {
     }
 
     .container {
-        padding: 15px;
+        padding: 5px;
     }
 }
 
@@ -238,6 +213,39 @@ footer p {
 }
 
 @media (max-width: 768px) {
+
+    header {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em; /* Ajusta o tamanho da fonte do h1 para dispositivos menores */
+        margin: 0; /* Remove margens para evitar cortes */
+        padding: 0; /* Remove padding */
+        line-height: 1.2; /* Ajusta a altura da linha para melhor leitura */
+        word-wrap: break-word; /* Quebra palavras longas para evitar corte */
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        padding: 10px;
+        width: 100%; /* Garante que o container ocupe toda a largura disponível */
+        box-sizing: border-box; /* Inclui padding e border na largura total */
+    }
+
     .nav-menu {
         display: none; /* Esconde o menu por padrão */
         position: absolute;
@@ -253,7 +261,7 @@ footer p {
         position: absolute;
         left: 85%; /* Ajuste este valor para mover o botão para a esquerda */
         top: 50%; /* Alinha verticalmente ao meio do cabeçalho */
-        transform: translateY(-30%); /* Corrige o alinhamento vertical */
+        transform: translateY(-50%); /* Corrige o alinhamento vertical */
     }
 
     .nav-menu ul {
@@ -283,21 +291,22 @@ footer p {
     }
 
     #apresentacao {
+        display: flex;
         flex-direction: column; /* Empilha os itens verticalmente */
         align-items: center; /* Centraliza os itens horizontalmente */
         text-align: center; /* Centraliza o texto */
-        padding: 10px;
+        padding: 20px; /* Ajusta o padding para dar mais espaço */
         margin-top: 0;
     }
 
     .foto {
-        margin-top: 20px; /* Espaço acima da imagem quando empilhada */
+        margin-top: 20px; /* Espaço acima da imagem */
         width: 80%; /* Ajusta a largura da imagem para caber na tela */
         max-width: 300px; /* Define um tamanho máximo para a imagem */
     }
 
     .vaca {
-        margin-top: 0; /* Espaço acima da imagem quando empilhada */
+        margin-top: 0; /* Espaço acima da imagem */
         width: 100%; /* Ajusta a largura da imagem para caber na tela */
         max-width: 500px; /* Define um tamanho máximo para a imagem */
     }
@@ -310,7 +319,7 @@ footer p {
         margin-top: 0;
     }
 
-    .containereducacao {
+    .containereducacao, .container {
         text-align: center;
         width: 100%; /* Faz com que o container ocupe toda a largura disponível */
         padding: 0px; /* Ajusta o padding horizontal */
@@ -320,28 +329,30 @@ footer p {
         overflow-x: hidden;
     }
 
-    .container {
-        width: 100%; /* Faz com que o container ocupe toda a largura disponível */
-        padding: 0px; /* Ajusta o padding horizontal */
-        box-sizing: border-box;
-        margin: 10px 0;
-        max-width: 100%;
-        overflow-x: hidden;
-    }
-
     .container p {
-        text-align: justify; /* Centraliza o texto */
-        margin: 20px auto 10px; /* Remove margens que possam causar corte do texto */
+        text-align: justify; /* Justifica o texto */
+        margin: 20px auto 10px; /* Espaço ao redor do parágrafo */
         padding: 0px; /* Espaçamento interno */
         line-height: 1.6; /* Ajusta a altura da linha */
         max-width: 100%; /* Garante que o parágrafo use a largura total disponível */
         overflow: visible; /* Garante que o texto não seja cortado */
     }
 
-    h1 {
-        font-size: 2em; /* Reduz o tamanho da fonte para telas menores */
-        margin: 0; /* Garante que não haja margens adicionais */
-        margin-bottom: 10px;
+    .contact-button {
+        display: inline-block; /* Faz com que o botão se comporte como um bloco inline */
+        padding: 10px 20px; /* Espaçamento interno do botão */
+        font-size: 1em; /* Ajusta o tamanho da fonte */
+        color: #fff; /* Cor do texto */
+        background-color: #498C6D; /* Cor de fundo do botão */
+        border: none; /* Remove bordas */
+        border-radius: 5px; /* Bordas arredondadas */
+        cursor: pointer; /* Muda o cursor para indicar que é clicável */
+        margin-top: 20px; /* Espaço acima do botão */
+        text-decoration: none; /* Remove sublinhado dos links */
+    }
+
+    .contact-button:hover {
+        background-color: #3d6a54; /* Cor de fundo ao passar o mouse */
     }
 }
 
