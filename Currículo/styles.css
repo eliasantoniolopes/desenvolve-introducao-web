@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    padding-top: 200px;
+    padding-top: 60px;
 }
 
 /* Estiliza o cabeçalho e o menu de navegação */
@@ -219,25 +219,6 @@ footer p {
 
 @media (max-width: 768px) {
 
-    .containercertificacao {
-        display: grid; /* Muda para grid para telas menores */
-        grid-template-columns: 1fr; /* Apenas uma coluna, exibindo um item por linha */
-        gap: 20px; /* Espaço entre os itens */
-        padding: 0; /* Remove padding lateral para evitar overflow */
-        box-sizing: border-box; /* Inclui padding e border na largura e altura do contêiner */
-        width: 100%; /* Garante que o contêiner não ultrapasse a largura da tela */
-    }
-    
-    .containercertificacao h1 {
-        font-size: 2em; /* Ajusta o tamanho da fonte para telas menores */
-        width: 100%; /* Faz com que o título ocupe toda a largura disponível */
-    }
-    
-    .certificacao-item {
-        max-width: 100%; /* Garante que cada item não ultrapasse a largura disponível */
-        box-sizing: border-box; /* Inclui padding e border na largura e altura dos itens */
-    }
-
     header {
         padding: 15px;
     }
@@ -265,9 +246,9 @@ footer p {
     }
 
     .container {
-        padding: 10px;
+        padding: 0 20px;
         width: 100%; /* Garante que o container ocupe toda a largura disponível */
-        box-sizing: border-box; /* Inclui padding e border na largura total */
+        height: 100%;
     }
 
     .nav-menu {
@@ -357,14 +338,18 @@ footer p {
         text-align: justify; /* Justifica o texto */
         margin: 20px auto 10px; /* Espaço ao redor do parágrafo */
         padding: 0px; /* Espaçamento interno */
-        line-height: 1.6; /* Ajusta a altura da linha */
+        line-height: 1.2; /* Ajusta a altura da linha */
         max-width: 100%; /* Garante que o parágrafo use a largura total disponível */
         overflow: visible; /* Garante que o texto não seja cortado */
     }
 
+    #apresentacao h1 {
+        font-size: 1.5em; /* Ajusta o tamanho da fonte do título para telas menores */
+    }
+
     .contact-button {
         display: inline-block; /* Faz com que o botão se comporte como um bloco inline */
-        padding: 10px 20px; /* Espaçamento interno do botão */
+        padding: 10px; /* Espaçamento interno do botão */
         font-size: 1em; /* Ajusta o tamanho da fonte */
         color: #fff; /* Cor do texto */
         background-color: #498C6D; /* Cor de fundo do botão */
@@ -377,6 +362,25 @@ footer p {
 
     .contact-button:hover {
         background-color: #3d6a54; /* Cor de fundo ao passar o mouse */
+    }
+
+    .containercertificacao {
+        display: grid; /* Muda para grid para telas menores */
+        grid-template-columns: 1fr; /* Apenas uma coluna, exibindo um item por linha */
+        gap: 20px; /* Espaço entre os itens */
+        padding: 0; /* Remove padding lateral para evitar overflow */
+        box-sizing: border-box; /* Inclui padding e border na largura e altura do contêiner */
+        width: 100%; /* Garante que o contêiner não ultrapasse a largura da tela */
+    }
+    
+    .containercertificacao h1 {
+        font-size: 2em; /* Ajusta o tamanho da fonte para telas menores */
+        width: 100%; /* Faz com que o título ocupe toda a largura disponível */
+    }
+    
+    .certificacao-item {
+        max-width: 100%; /* Garante que cada item não ultrapasse a largura disponível */
+        box-sizing: border-box; /* Inclui padding e border na largura e altura dos itens */
     }
 }
 
