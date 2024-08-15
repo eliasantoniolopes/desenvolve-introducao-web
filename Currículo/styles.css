@@ -86,6 +86,7 @@ nav a {
     margin: 10px auto; /* Ajuste as margens para centralizar */
     padding: 10px; /* Espaçamento interno dos parágrafos */
     line-height: 1.8; /* Aumenta a altura da linha para melhorar a legibilidade */
+    height: 100%;
     max-width: 800px; /* Define a largura máxima do parágrafo */
     color: #fff;
 }
