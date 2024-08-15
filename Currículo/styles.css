@@ -194,6 +194,10 @@ footer p {
     .container {
         padding: 5px;
     }
+
+    .certificacao-item {
+        flex: 1 1 100%; /* Largura ajustável para 1 coluna em telas muito pequenas */
+    }
 }
 
 .menu-toggle {
@@ -213,6 +217,25 @@ footer p {
 }
 
 @media (max-width: 768px) {
+
+    .containercertificacao {
+        display: grid; /* Muda para grid para telas menores */
+        grid-template-columns: 1fr; /* Apenas uma coluna, exibindo um item por linha */
+        gap: 20px; /* Espaço entre os itens */
+        padding: 0; /* Remove padding lateral para evitar overflow */
+        box-sizing: border-box; /* Inclui padding e border na largura e altura do contêiner */
+        width: 100%; /* Garante que o contêiner não ultrapasse a largura da tela */
+    }
+    
+    .containercertificacao h1 {
+        font-size: 2em; /* Ajusta o tamanho da fonte para telas menores */
+        width: 100%; /* Faz com que o título ocupe toda a largura disponível */
+    }
+    
+    .certificacao-item {
+        max-width: 100%; /* Garante que cada item não ultrapasse a largura disponível */
+        box-sizing: border-box; /* Inclui padding e border na largura e altura dos itens */
+    }
 
     header {
         padding: 15px;
@@ -462,6 +485,7 @@ nav li:hover a {
     padding: 20px; /* Espaçamento ao redor da seção */
     background-color: #498C6D; /* Cor de fundo desejada para a seção */
     text-align: center; /* Centraliza o texto do título dentro da seção */
+    overflow: hidden;
 }
 
 #habilidade {
@@ -551,29 +575,38 @@ nav li:hover a {
 }
 
 .containercertificacao {
-    display: grid; /* Usar grid para layout de colunas */
-    grid-template-columns: repeat(5, 1fr); /* 5 colunas de largura igual */
-    gap: 20px; /* Espaço entre as colunas */
-    max-width: 1200px; /* Largura máxima do contêiner */
+    display: flex; /* Usar flex para layout de colunas */
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte quando necessário */
+    gap: 20px; /* Espaço entre os itens */
+    max-width: 100%; /* Largura máxima do contêiner */
     margin: 0 auto; /* Centraliza o contêiner horizontalmente */
-    align-items: center;
-    overflow-x: hidden;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    box-sizing: border-box; /* Inclui padding e border na largura e altura dos elementos */
 }
 
 .certificacao-item {
     background: #fff; /* Fundo branco para os itens */
-    padding: 20px; /* Espaçamento interno dos itens */
+    padding: 15px; /* Espaçamento interno dos itens */
     border-radius: 8px; /* Cantos arredondados dos itens */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    border: 1px solid #ddd; /* Borda leve ao redor dos itens */
     text-align: center; /* Centraliza o texto dentro dos itens */
+    box-sizing: border-box; /* Inclui padding e border na largura e altura dos itens */
+    flex: 1 1 100px; /* Faz com que os itens tenham uma largura mínima e cresçam conforme o disponível */
+    max-width: 100%; /* Garante que cada item não ultrapasse a largura disponível */
+}
+
+.certificacao-item p {
+    margin: 5px 0; /* Espaçamento vertical entre os parágrafos */
 }
 
 .containercertificacao h1 {
-    grid-column: span 5; /* Faz com que o título ocupe toda a largura das 5 colunas */
+    grid-column: span 4; /* Faz com que o título ocupe toda a largura das 4 colunas */
     margin: 0; /* Remove margens ao redor do título */
     margin-bottom: 20px; /* Espaço abaixo do título */
-    font-size: 3em; /* Tamanho da fonte do título */
+    font-size: 2.5em; /* Tamanho da fonte do título */
     color: #f9f9f9; /* Cor do texto do título */
+    width: 100%; /* Faz com que o título ocupe toda a largura disponível */
 }
 
 #habilidades {
